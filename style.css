@@ -171,7 +171,6 @@
       flex-direction: row;
       justify-content: space-between;
       width: 100%;
-      background: grey;  padding: 15px;
     }
 
     .cuadro {
@@ -192,7 +191,6 @@
       font-size: 1.25rem;
       font-weight: bold;
       float: left;
-      background: grey;  
     }
     
     .cuadro > :first-child {
