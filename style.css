@@ -200,7 +200,7 @@
       color: var(--color-acento);
     }
 
-    .cuadro:not(:first-child):not(:last-child)   {
+    .cuadro :not(:first-child):not(:last-child)   {
       margin: 0 0 0 6vw;
       font-size: 1.25rem;
       font-weight: bold;
