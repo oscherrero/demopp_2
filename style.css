@@ -190,6 +190,8 @@
       padding: 2vw;
     }
     
+
+
     .cuadro :first-child {
       margin: 0 0 1vw 0;
       text-align: left;
@@ -198,7 +200,7 @@
       color: var(--color-acento);
     }
 
-    .cuadro :nth-child(2) {
+    .cuadro:not(:first-child):not(:last-child)   {
       margin: 0 0 0 6vw;
       font-size: 1.25rem;
       font-weight: bold;
