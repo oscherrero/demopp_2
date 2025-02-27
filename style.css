@@ -103,6 +103,7 @@
       flex-grow: 1;
       overflow: auto;
       padding: 5%;
+       overscroll-behavior: contain;
     }
 
     body button,
