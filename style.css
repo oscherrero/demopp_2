@@ -157,15 +157,6 @@
       cursor: pointer;
     }
 
-    .contenedor {
-      height: auto;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 100%;
-    }
-
     .marco {
       background-color: white; 
       opacity: 90%;
@@ -175,6 +166,15 @@
       margin-bottom: 1vw;
       text-align: center;
       box-sizing: border-box;
+    }
+
+    .contenedor {
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
     }
 
     .cuadro {
