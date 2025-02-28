@@ -209,6 +209,16 @@
       margin: 1vw 0 0 3vw;
     }
 
+    .imagenEspera{
+      text-align:center; 
+      width:100%;
+      img  {
+        margin: 0 auto;  
+        display: block;
+      }
+    }
+
+
     footer {
       height: calc(var(--header-size)*0.5);
       background-color: var(--color-acento);

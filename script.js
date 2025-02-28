@@ -7,6 +7,7 @@ const temas=[
   [ "cyan", "cyan", "blue", "white"  ],
   [ "cyan", "cyan", "green", "white"  ],
 ]
+
 window.onload=init()
     
 function init() {
@@ -90,7 +91,7 @@ async function chiste(){
     const elemTitulo=document.getElementById("tituloGranja")
 
     elem1.classList.remove("oculto");
-    elem1.innerHTML = "<div style='text-allign:center; width=100%'><img  style='margin: 0 auto;  display: block;'  src='https://drive.google.com/thumbnail?id=14boOFBzVB9GCsZTdiATLFxrcKNHWmgV4' alt=''></div> <br><br>"
+    elem1.innerHTML = "<div class='imagenEspera'><img  src='https://drive.google.com/thumbnail?id=14boOFBzVB9GCsZTdiATLFxrcKNHWmgV4' alt=''></div> <br><br>"
 
     fetch(url) 
       .then (response=>{ return response.text()})
