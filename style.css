@@ -212,6 +212,7 @@
     .imagenEspera{
       text-align:center; 
       width:100%;
+      heigth:50%;
       img  {
         margin: 0 auto;  
         display: block;
