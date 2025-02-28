@@ -117,7 +117,7 @@
       border: 1vw solid var(--color-acento);
       border-radius: 3vw;
       padding: 2% 30%;
-      text-allign: center;
+      text-align: center;
       color: var(--color-acento);
       display: flex;
       flex-direction: column;
