@@ -42,8 +42,8 @@ async function cargarHTML() {
 
   document.getElementById("elemento1").classList.remove("oculto");
   document.getElementById("logForm").classList.add("oculto");
-  document.getElementById("elemento1").innerHTML = "<div style='text-allign:center; width=100%'><img  style='margin: 0 auto;  display: block;'  src='"+ imgEsperaUrl +"' alt='Recopilando datos'></div> <br><br>"
-    
+  document.getElementById("elemento1").innerHTML = = "<div class='imagenEspera'><img  src='" + imgEsperaUrl + "'></div> <br><br>"
+ 
   try {
     
     const formData= new FormData(document.getElementById("logForm"))
