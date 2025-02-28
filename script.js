@@ -10,14 +10,18 @@ const temas=[
 
 window.onload=init()
     
-function init() {
-  var options =localStorage.getItem("options")
+cargarListaGranjas(options){
   document.getElementById("granja").innerHTML = options
-
   var stGranjaCod = localStorage.getItem("granja") != null ? localStorage.getItem("granja") : '{"granja":"","cod":""}';
   var granjaCod = JSON.parse(stGranjaCod)
   document.getElementById("granja").value = granjaCod.granja
   document.getElementById("cod").value = granjaCod.cod
+}
+
+
+function init() {
+  var options =localStorage.getItem("options")
+  cargarListaGranjas(options)
 
   var tema=localStorage.getItem("tema")!=null?parseInt(localStorage.getItem("tema"))-1:10;
   localStorage.setItem("tema",tema)
@@ -59,11 +63,7 @@ async function cargarHTML() {
 
   var resp = await response.json()
   localStorage.setItem("options",resp.optionsHtml)
-  document.getElementById("granja").innerHTML = resp.optionsHtml
-  var stGranjaCod = localStorage.getItem("granja") != null ? localStorage.getItem("granja") : '{"granja":"","cod":""}';
-  var granjaCod = JSON.parse(stGranjaCod)
-  document.getElementById("granja").value = granjaCod.granja
-  document.getElementById("cod").value = granjaCod.cod
+  cargarListaGranjas(resp.optionsHtml)
 
   if (resp.html == "NoAuth") {
       document.getElementById("elemento1").innerHTML = "<div style='color:red; text-align:center;'><br> INDICA UNA GRANJA Y CLAVE VALIDOS </div>"
