@@ -91,7 +91,7 @@ async function chiste(){
     const elemTitulo=document.getElementById("tituloGranja")
 
     elem1.classList.remove("oculto");
-    elem1.innerHTML = "<div class='imagenEspera'><img  src='https://drive.google.com/thumbnail?id=14boOFBzVB9GCsZTdiATLFxrcKNHWmgV4' alt=''></div> <br><br>"
+    elem1.innerHTML = "<div class='imagenEspera'><img  src='" + imgEsperaUrl + "'></div> <br><br>"
 
     fetch(url) 
       .then (response=>{ return response.text()})
