@@ -63,7 +63,10 @@ async function cargarHTML() {
 
   var resp = await response.json()
   localStorage.setItem("options",resp.optionsHtml)
+
   cargarListaGranjas(resp.optionsHtml)
+  document.getElementById("granja").value = codInput
+  document.getElementById("cod").value =  codInput
 
   if (resp.html == "NoAuth") {
       document.getElementById("elemento1").innerHTML = "<div style='color:red; text-align:center;'><br> INDICA UNA GRANJA Y CLAVE VALIDOS </div>"
