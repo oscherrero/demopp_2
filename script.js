@@ -13,10 +13,8 @@ window.onload=init()
 function init() {
   var options =localStorage.getItem("options")
   document.getElementById("granja").innerHTML = options
-  var stGranjaCod = localStorage.getItem("granja") != null ? localStorage.getItem("granja") : '{"granja":"","cod":""}';
-  var granjaCod = JSON.parse(stGranjaCod)
-  document.getElementById("granja").value = granjaCod.granja
-  document.getElementById("cod").value = granjaCod.cod
+
+  recuperarListaGranjas()
 
   var tema=localStorage.getItem("tema")!=null?parseInt(localStorage.getItem("tema"))-1:10;
   localStorage.setItem("tema",tema)
@@ -80,42 +78,47 @@ async function cargarHTML() {
   }  
 }
 
+recuperarListaGranjas(){
+  var stGranjaCod = localStorage.getItem("granja") != null ? localStorage.getItem("granja") : '{"granja":"","cod":""}';
+  var granjaCod = JSON.parse(stGranjaCod)
+  document.getElementById("granja").value = granjaCod.granja
+  document.getElementById("cod").value = granjaCod.cod
+}
+
 function verLogForm(){
-    document.getElementById("logForm").classList.remove("oculto");
-    document.getElementById("elemento1").classList.add("oculto");
+  document.getElementById("logForm").classList.remove("oculto");
+  document.getElementById("elemento1").classList.add("oculto");
 }
 
 async function chiste(){ 
-    const url="https://script.google.com/macros/s/AKfycbyS5L58pIm7EUGNtslScWblYXTPTDKi1eu7f7CukD4rXPZZ4jBhZaQCKGIPA2Y-95HX/exec"  //demo_PP2
-    const elem1 = document.getElementById("elemento1") 
-    const elemTitulo=document.getElementById("tituloGranja")
+  const url="https://script.google.com/macros/s/AKfycbyS5L58pIm7EUGNtslScWblYXTPTDKi1eu7f7CukD4rXPZZ4jBhZaQCKGIPA2Y-95HX/exec"  //demo_PP2
+  const elem1 = document.getElementById("elemento1") 
+  const elemTitulo=document.getElementById("tituloGranja")
 
-    elem1.classList.remove("oculto");
-    elem1.innerHTML = "<div class='imagenEspera'><img  src='" + imgEsperaUrl + "'></div> <br><br>"
+  elem1.classList.remove("oculto");
+  elem1.innerHTML = "<div class='imagenEspera'><img  src='" + imgEsperaUrl + "'></div> <br><br>"
 
-    fetch(url) 
-      .then (response=>{ return response.text()})
-      .then (data=>{
-          elem1.innerHTML= "<div class='marco chiste'>" + data + "</div>";
-          elemTitulo.innerHTML="CHISTE MALO";
-      })
+  fetch(url) 
+    .then (response=>{ return response.text()})
+    .then (data=>{
+      elem1.innerHTML= "<div class='marco chiste'>" + data + "</div>";
+      elemTitulo.innerHTML="CHISTE MALO";
+  })
 }
 
 function acercade(){ 
-    const elem1 = document.getElementById("elemento1") 
-    const elemTitulo=document.getElementById("tituloGranja")
-
-    elem1.innerHTML = "<div class='marco'><h3>Demo conexión datos AVEVA INSIGHT</h3><p>Realizada por OscarHR con Google Apps Script.</p><p>04/01/2025</p></div> <br><br>"
+  const elem1 = document.getElementById("elemento1") 
+  elem1.innerHTML = "<div class='marco'><h3>Demo conexión datos AVEVA INSIGHT</h3><p>Realizada por OscarHR con Google Apps Script.</p><p>04/01/2025</p></div> <br><br>"
 }
 
 function cambiarTema() {
-        var tema=localStorage.getItem("tema")!=null?parseInt(localStorage.getItem("tema")):10;
-        tema = tema < (temas.length-1) ? tema+1:0;
-        localStorage.setItem("tema",tema);
-        const root = document.documentElement;
-        root.style.setProperty('--color-primario', temas[tema][0]);
-        root.style.setProperty('--color-secundario', temas[tema][1]);
-        root.style.setProperty('--color-acento',temas[tema][2]);
+  var tema=localStorage.getItem("tema")!=null?parseInt(localStorage.getItem("tema")):10;
+  tema = tema < (temas.length-1) ? tema+1:0;
+  localStorage.setItem("tema",tema);
+  const root = document.documentElement;
+  root.style.setProperty('--color-primario', temas[tema][0]);
+  root.style.setProperty('--color-secundario', temas[tema][1]);
+  root.style.setProperty('--color-acento',temas[tema][2]);
 }
 
 const menuButton = document.querySelector('.menu-burger');
