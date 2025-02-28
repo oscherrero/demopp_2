@@ -190,6 +190,7 @@
 
     .cuadro div p{
             color :green;
+            background:cyan;
       display:block;
    }
     
@@ -219,13 +220,12 @@
     .imagenEspera{
       text-align:center; 
       width:100%;
-      heigth:50%;
+      height:50%;
       img  {
         margin: 0 auto;  
         display: block;
       }
     }
-
 
     footer {
       height: calc(var(--header-size)*0.5);
