@@ -63,7 +63,6 @@ async function cargarHTML() {
 
   var resp = await response.json()
   localStorage.setItem("options",resp.optionsHtml)
-
   cargarListaGranjas(resp.optionsHtml)
   document.getElementById("granja").value = codInput
   document.getElementById("cod").value =  codInput
