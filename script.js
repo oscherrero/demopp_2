@@ -78,7 +78,7 @@ async function cargarHTML() {
   }  
 }
 
-recuperarListaGranjas(){
+function recuperarListaGranjas(){
   var stGranjaCod = localStorage.getItem("granja") != null ? localStorage.getItem("granja") : '{"granja":"","cod":""}';
   var granjaCod = JSON.parse(stGranjaCod)
   document.getElementById("granja").value = granjaCod.granja
