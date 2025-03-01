@@ -188,8 +188,7 @@ body label {
 }
 
 .cuadro div p{
-    background:cyan;
-  display:block;
+   // display:block;
 }
 
 .cuadro *  {
