@@ -165,56 +165,6 @@ body label {
   box-sizing: border-box;
 }
 
-.contenedor {
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.cuadro {
-  background-color: white; 
-  opacity: 90%;
-  border: 0.5vw solid var(--color-acento);
-  border-radius: 3vw;
-  margin-bottom: 1vw;
-  text-align: center;
-  box-sizing: border-box;
-
-  flex: 0 0 49.5%;
-  padding: 2vw;
-  
-}
-
-.cuadro div p{
-   // display:block;
-}
-
-.cuadro *  {
-  margin: 0 0 0 6vw;
-  font-size: 1.25rem;
-  font-weight: bold;
-  float: left;
-  
-}
-
-.cuadro > :first-child {
-  margin: 0 0 1vw 0;
-  text-align: left;
-  font-size: 1rem;
-  font-weight: bold;
-  color: var(--color-acento);
-}
-
-.cuadro > :last-child {
-  width: auto;
-  text-align: right;
-  float: right;
-  margin: 1vw 0 0 3vw;
-}
-
 .imagenEspera{
   text-align:center; 
   width:100%;
