@@ -20,6 +20,7 @@ function cargarListaGranjas(options){
    
 function init() {
   var options =localStorage.getItem("options")
+  
   cargarListaGranjas(options)
 
   var tema=localStorage.getItem("tema")!=null?parseInt(localStorage.getItem("tema"))-1:10;
@@ -35,10 +36,12 @@ function cambiarFormatoPC(){
   const devicePixelRatio = window.devicePixelRatio;
   if (devicePixelRatio <= 2) {
     const root = document.documentElement;
-    root.style.setProperty('--header-size', '6vw');
-    root.style.setProperty('font-size', '2vw');
+    root.style.setProperty('--header-size', '10vh');
+    root.style.setProperty('font-size', '3vh');
   }
 }
+
+function recargarWeb (){  location.href = location.href + "?" + new Date().getTime();}
 
 function info() {
   const anchoPantalla = window.innerWidth;
@@ -121,6 +124,7 @@ async function chiste(){
 function acercade(){ 
   const elem1 = document.getElementById("elemento1") 
   elem1.innerHTML = "<div class='marco'><h3>Demo conexión datos AVEVA INSIGHT</h3><p>Realizada por OscarHR con Google Apps Script.</p><p>04/01/2025</p></div> <br><br>"
+  elem1.innerHTML += "<div> Resolucion: "+ window.devicePixelRatio; +"</div>"
 }
 
 function cambiarTema() {
