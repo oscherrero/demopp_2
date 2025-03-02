@@ -163,7 +163,7 @@ body label {
   flex-direction: column;
   justify-content: center;
   img{
-    font-size: 1;
+    flex-groe:0;
   };
 }
 
