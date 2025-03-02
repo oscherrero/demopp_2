@@ -201,11 +201,11 @@ footer p {
     --header-size: 10vh;
     font-size: 3vh;
   }
+  header .titulo {
+    background: pink;
+  }
 
 }
-
-/* desktop 
-@media (max-width: 850px) and (max-resolution: 2dppx) {}*/
 
 /* movil landscape */
 @media (max-width: 850px) and (orientation: landscape) {
@@ -213,4 +213,10 @@ footer p {
     --header-size: 16vh;
     font-size: 4vh;
   }
+  header .titulo {
+    background: cyan;
+  }
 }
+
+/* desktop 
+@media (max-width: 850px) and (max-resolution: 2dppx) {}*/
