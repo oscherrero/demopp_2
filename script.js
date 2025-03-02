@@ -152,3 +152,20 @@ document.addEventListener('click', (event) => {
   };
 });
 function closeMenu(){ document.querySelector('nav').classList.remove('active')     }
+
+function detectarDispositivo() {
+  const userAgent = navigator.userAgent.toLowerCase();
+
+  const esMovil =
+    /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(
+      userAgent
+    );
+
+  if (esMovil) {
+    console.log("Consulta desde un dispositivo móvil");
+    return "movil";
+  } else {
+    console.log("Consulta desde un PC");
+    return "pc";
+  }
+}
