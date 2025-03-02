@@ -166,6 +166,7 @@ body label {
   text-align:center; 
   width:100%;
   img  {
+    width:100%;
     margin: 25% auto;  
     display: block;
   }
@@ -183,7 +184,6 @@ footer {
 
 footer p {
   font-size: calc(var(--header-size)*0.2);
-  padding: calc(var(--header-size)*0.2);
 }
 
 .oculto {
