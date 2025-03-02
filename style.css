@@ -42,7 +42,7 @@ header  img{
 header .titulo {
   color: var(--color-blanco);
   font-family: "Arial";
-  font-size: 0.5rem;  /*calc(var(--header-size)*0.5);*/
+  font-size: calc(var(--header-size)*0.5);
 
   display: flex;
   justify-content: center;
@@ -209,7 +209,7 @@ footer p {
 }
 
 /* movil landscape */
-@media (max-width: 850px) and (orientation: landscape) {
+@media (max-width: 850px) and (orientation: landscape)  {
   :root {
     --header-size: 16vh;
     font-size: 4vh;
