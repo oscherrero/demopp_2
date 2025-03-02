@@ -165,7 +165,7 @@ body label {
 .imagenEspera{
   text-align:center; 
   width:100%;
-  height:50%;
+  margin-top: 25%;
   img  {
     margin: 0 auto;  
     display: block;
