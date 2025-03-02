@@ -27,9 +27,11 @@ function init() {
   localStorage.setItem("tema",tema)
   cambiarTema()
 
-  cambiarFormatoPC()
 
   cargarHTML()
+
+  
+  //cambiarFormatoPC()
 }
 
 function cambiarFormatoPC(){
