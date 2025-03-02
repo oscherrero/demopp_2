@@ -18,7 +18,6 @@ function cargarListaGranjas(options){
   document.getElementById("cod").value = granjaCod.cod
 }
 
-
 function init() {
   var options =localStorage.getItem("options")
   cargarListaGranjas(options)
@@ -27,14 +26,18 @@ function init() {
   localStorage.setItem("tema",tema)
   cambiarTema()
 
+  cambiarFormatoPC()
 
+  cargarHTML()
+}
+
+function cambiarFormatoPC(){
   const devicePixelRatio = window.devicePixelRatio;
   if (devicePixelRatio <= 2) {
     const root = document.documentElement;
     root.style.setProperty('--header-size', '6vw');
     root.style.setProperty('font-size', '2vw');
   }
-  cargarHTML()
 }
 
 function info() {
