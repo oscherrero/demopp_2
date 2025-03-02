@@ -194,6 +194,7 @@ footer p {
   font-size: 1rem !important;
 }
 
+/* desktop */
 @media  (min-width: 850px) {
 
   :root {
@@ -203,6 +204,13 @@ footer p {
 
 }
 
-@media (max-width: 850px) and (max-resolution: 2dppx) {}
+/* desktop 
+@media (max-width: 850px) and (max-resolution: 2dppx) {}*/
 
-@media (max-width: 850px) and (orientation: landscape) {}
+/* movil landscape */
+@media (max-width: 850px) and (orientation: landscape) {
+  :root {
+    --header-size: 16vh;
+    font-size: 4vh;
+  }
+}
