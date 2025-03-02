@@ -17,7 +17,7 @@ function cargarListaGranjas(options){
   document.getElementById("granja").value = granjaCod.granja
   document.getElementById("cod").value = granjaCod.cod
 }
-
+   
 function init() {
   var options =localStorage.getItem("options")
   cargarListaGranjas(options)
