@@ -28,9 +28,13 @@ header {
   padding: calc(var(--header-size)*0.15);
 
   display: flex;
+  align-items: center;
   position:sticky; 
   top:0; 
   z-index: 1;
+
+  display: flex;
+  align-items: center;
 }
 
 header  img{

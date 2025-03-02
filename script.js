@@ -26,12 +26,8 @@ function init() {
   var tema=localStorage.getItem("tema")!=null?parseInt(localStorage.getItem("tema"))-1:10;
   localStorage.setItem("tema",tema)
   cambiarTema()
-
   cargarHTML()
-
 }
-
-
 
 function recargarWeb (){  location.href = location.href + "?" + new Date().getTime();}
 
