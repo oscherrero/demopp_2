@@ -98,12 +98,14 @@ header nav.active {
 }
 
 main {
-  height: 100vh;
-  background-color: var(--color-secundario);
   flex-grow: 1;
-  overflow: auto;
+
+  background-color: var(--color-secundario);
   padding: 5%;
-  //overscroll-behavior: contain;
+  /* 
+  overflow: auto;
+  height: 100vh;
+   overscroll-behavior: contain; */
 }
 
 body button,
