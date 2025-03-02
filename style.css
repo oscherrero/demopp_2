@@ -155,7 +155,7 @@ body label {
   border-radius: 20px;
   cursor: pointer;
 }
-
+/*
 .marco {
   background-color: white; 
   opacity: 90%;
@@ -166,6 +166,7 @@ body label {
   text-align: center;
   box-sizing: border-box;
 }
+  */
 
 .imagenEspera{
   text-align:center; 
@@ -173,9 +174,6 @@ body label {
   display:flex; 
   flex-direction: column;
   justify-content: center;
-  /*img  {
-    display: block;
-  }*/
 }
 
 footer {
