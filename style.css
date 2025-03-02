@@ -197,7 +197,7 @@ footer p {
 }
 
 /* desktop */
-@media  (min-width: 850px) {
+@media  (min-width: 900px) {
   :root {
     --header-size: 10vh;
     font-size: 3vh;
@@ -208,7 +208,7 @@ footer p {
 }
 
 /* movil landscape */
-@media (max-width: 850px) and (orientation: landscape)  {
+@media (max-width: 900px) and (orientation: landscape)  {
   :root {
     --header-size: 16vh;
     font-size: 4vh;
