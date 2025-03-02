@@ -194,7 +194,13 @@ footer p {
   font-size: 4vw !important;
 }
 
-@media  (max-resolution: 2dppx) {
+@media  (min-width: 850px) {
+
+  :root {
+    --header-size: 10vh;
+    font-size: 3vh;
+  }
+
   header .titulo {
     background:cyan;
   }
