@@ -207,5 +207,6 @@ footer p {
 
 }
 
-@media (min-width: 850px) and (max-resolution: 2dppx) {
-}
+@media (m-width: 850px) and (max-resolution: 2dppx) {}
+
+@media (m-width: 850px) and (orientation: landscape) {}
