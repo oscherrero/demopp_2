@@ -198,15 +198,10 @@ footer p {
 
 /* desktop */
 @media  (min-width: 850px) {
-
   :root {
     --header-size: 10vh;
     font-size: 3vh;
   }
-  header .titulo {
-    background: pink;
-  }
-
 }
 
 /* movil landscape */
@@ -214,9 +209,6 @@ footer p {
   :root {
     --header-size: 16vh;
     font-size: 4vh;
-  }
-  header .titulo {
-    background: cyan;
   }
 }
 
