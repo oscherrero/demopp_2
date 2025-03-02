@@ -191,7 +191,7 @@ footer p {
 
 .chiste {
   margin: 4vw 0 4vw 0;
-  font-size: 4vw !important;
+  font-size: 1rem !important;
 }
 
 @media  (min-width: 850px) {
@@ -201,12 +201,11 @@ footer p {
     font-size: 3vh;
   }
 
-  header .titulo {
-    background:cyan;
-  }
-
 }
 
-@media (m-width: 850px) and (max-resolution: 2dppx) {}
+@media (max-width: 850px) and (max-resolution: 2dppx) {}
 
-@media (m-width: 850px) and (orientation: landscape) {}
+@media (max-width: 850px) and (orientation: landscape) {
+
+
+}
