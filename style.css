@@ -196,7 +196,21 @@ footer p {
   font-size: 1rem !important;
 }
 
+    /* desktop */
+    @media  (min-width: 900px) {
+      :root { 
+        --header-size: 10vh;
+        font-size: 3vh;
+      }
+    }
 
+    /* movil landscape */
+    @media (max-width: 900px) and (orientation: landscape)  {
+      :root { 
+        --header-size: 16vh;
+        font-size: 4vh;
+      }
+    }
 
 /* desktop 
 @media (max-width: 850px) and (max-resolution: 2dppx) {}*/
