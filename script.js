@@ -34,7 +34,7 @@ function init() {
 
 function cambiarFormatoPC(){
   const devicePixelRatio = window.devicePixelRatio;
-  if (devicePixelRatio <= 2) {
+  if (devicePixelRatio <= 2 ||  window.matchMedia("(orientation: landscape)").matches;  ) {
     const root = document.documentElement;
     root.style.setProperty('--header-size', '10vh');
     root.style.setProperty('font-size', '3vh');
