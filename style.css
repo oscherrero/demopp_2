@@ -183,6 +183,7 @@ footer {
   }
 
 footer p {
+  margin-left:5%;
   font-size: calc(var(--header-size)*0.2);
 }
 
