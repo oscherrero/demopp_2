@@ -139,10 +139,10 @@ body label {
 .marco {
   background-color: white; 
   opacity: 90%;
-  border: 0.5vw solid var(--color-acento);
-  border-radius: 3vw;
-  padding: 4vw;
-  margin-bottom: 1vw;
+  border: 0.15rem solid var(--color-acento);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 0.25rem;
   text-align: center;
   box-sizing: border-box;
 }
