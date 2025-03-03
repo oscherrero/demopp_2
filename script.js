@@ -103,6 +103,7 @@ async function chiste(){
   elem1.innerHTML = "<div class='imagenEspera'><img  src='" + imgEsperaUrl + "'></div> <br><br>"
 
   fetch(url, {
+    redirect: "follow",
     headers: {
       'Content-Type': "text/plain;charset=utf-8"
     }
