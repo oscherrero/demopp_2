@@ -101,13 +101,7 @@ async function chiste(){
   elem1.classList.remove("oculto");
   elem1.innerHTML = "<div class='imagenEspera'><img  src='" + imgEsperaUrl + "'></div> <br><br>"
 
-  fetch(urlChiste, {
-    method: "POST",
-    redirect: "follow",
-    headers: {
-      'Content-Type': "text/plain;charset=utf-8"
-    }
-  })
+  fetch(urlChiste)
     .then (response=>{ return response.text()})
     .then (data=>{
       elem1.innerHTML= "<div class='marco chiste'>" + data + "</div>";
