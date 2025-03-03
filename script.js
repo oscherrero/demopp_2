@@ -1,7 +1,7 @@
 
 const webUrl= "https://script.google.com/macros/s/AKfycbyS5L58pIm7EUGNtslScWblYXTPTDKi1eu7f7CukD4rXPZZ4jBhZaQCKGIPA2Y-95HX/exec"   
 const imgEsperaUrl="/demopp_2/SimboloEspera.gif"
-const urlChiste="https://script.google.com/macros/s/AKfycbxQDkGmok12X_rM1-jeVbZaDarME5cMXdTL9a6VoiSAzSgfCmSkQGpRCyisDSi_LMt9/exec"
+const urlChiste="https://script.google.com/macros/s/AKfycbxtGofgvSOkwx7T7pwzHrzXA59swnf8DAY_2xNrySYdDFaHTds_8jOVtX1HS1tiEcoM/exec"
 const temas=[ 
   [ "#f8f4ff", "pink", "#CC0000", "white"  ],  //  1ario, 2ario, acento, blanco
   [ "cyan", "cyan", "blue", "white"  ],
@@ -95,14 +95,13 @@ function verLogForm(){
 }
 
 async function chiste(){ 
-  const url="https://script.google.com/macros/s/AKfycbyS5L58pIm7EUGNtslScWblYXTPTDKi1eu7f7CukD4rXPZZ4jBhZaQCKGIPA2Y-95HX/exec"  //demo_PP2
   const elem1 = document.getElementById("elemento1") 
   const elemTitulo=document.getElementById("tituloGranja")
 
   elem1.classList.remove("oculto");
   elem1.innerHTML = "<div class='imagenEspera'><img  src='" + imgEsperaUrl + "'></div> <br><br>"
 
-  fetch(url, {
+  fetch(urlChiste, {
     redirect: "follow",
     headers: {
       'Content-Type': "text/plain;charset=utf-8"
