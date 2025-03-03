@@ -142,7 +142,7 @@ body label {
   border: 0.15rem solid var(--color-acento);
   border-radius: 1rem;
   padding: 1rem;
-  margin-bottom: 0.25rem;
+  margin: 2rem;
   text-align: center;
   box-sizing: border-box;
 }
