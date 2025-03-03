@@ -104,7 +104,7 @@ async function chiste(){
   fetch(url) 
     .then (response=>{ return response.text()})
     .then (data=>{
-      elem1.innerHTML= "<div class='marco chiste'>" + data + "</div>";
+      elem1.innerHTML= "<div class='cuadro chiste'>" + data + "</div>";
       elemTitulo.innerHTML="CHISTE MALO";
   })
 }
@@ -141,19 +141,4 @@ document.addEventListener('click', (event) => {
 });
 function closeMenu(){ document.querySelector('nav').classList.remove('active')     }
 
-function detectarDispositivo() {
-  const userAgent = navigator.userAgent.toLowerCase();
 
-  const esMovil =
-    /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(
-      userAgent
-    );
-
-  if (esMovil) {
-    console.log("Consulta desde un dispositivo móvil");
-    return "movil";
-  } else {
-    console.log("Consulta desde un PC");
-    return "pc";
-  }
-}
