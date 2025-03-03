@@ -27,6 +27,7 @@ function init() {
   localStorage.setItem("tema",tema)
   cambiarTema()
   cargarHTML()
+
 }
 
 function recargarWeb (){  location.href = location.href + "?" + new Date().getTime();}
