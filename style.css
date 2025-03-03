@@ -89,6 +89,8 @@ header nav {
   justify-content: flex-start;
   align-items: left;
 
+  overflow-y:auto;
+
   ul li {
     list-style: none;
     margin-bottom: 2rem;
