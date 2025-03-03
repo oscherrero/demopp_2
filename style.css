@@ -159,20 +159,14 @@ body label {
 
 .imagenEspera{
   text-align:center; 
-<<<<<<< HEAD
-  width:100%; 
-  top:1.2rem;
-  bottom:0.7rem;
-  background:cyan;
-=======
   width: min (70vw, 70vh);
->>>>>>> 7e25022907d48b7092bde3d3121da0218fc9a1ed
   display:flex; 
   flex-direction: column;
   justify-content: center;
   img{
     flex-grow:0;
-  }
+  } 
+  background: cyan;
 }
 
 footer {
