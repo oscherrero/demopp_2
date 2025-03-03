@@ -161,13 +161,13 @@ body label {
   position:absolute;
   bottom:5rem;
   top:3rem;
-  width: min (70vw, 70vh);
+  /*width: min (70vw, 70vh);
   display:flex; 
   flex-direction: column;
   justify-content: center;
   img{
-    flex-grow:0;
-  } 
+    flex-grow:0 1;
+  } */
   background: cyan;
 }
 
