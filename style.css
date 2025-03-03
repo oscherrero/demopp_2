@@ -159,6 +159,7 @@ body label {
 
 .imagenEspera{
   text-align:center; 
+  bottom:0.7rem;
   width: min (70vw, 70vh);
   display:flex; 
   flex-direction: column;
