@@ -22,7 +22,7 @@ body {
 }
 
 header {
-  height: var(--header-size);
+  height: 4rem;
   background-color: var(--color-acento);
   color: var(--color-blanco);
   padding: calc(var(--header-size)*0.15);
@@ -55,7 +55,7 @@ header .titulo {
 }
 
 header .menu-burger {
-  padding: calc(var(--header-size)*0.1);
+  padding: 0.4rem; 
   height: 70%;
   aspect-ratio: 1;
   display: flex;
@@ -76,7 +76,7 @@ header nav {
   height: 100vh;
   padding: 5vh 5vw;
   position: fixed;
-  top: var(--header-size);
+  top: 4rem;
   right: -60%;
   width: 60%;
   transition: right 0.2s ease-in-out;
