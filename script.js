@@ -104,14 +104,14 @@ async function chiste(){
   fetch(url) 
     .then (response=>{ return response.text()})
     .then (data=>{
-      elem1.innerHTML= "<div class='cuadro chiste'>" + data + "</div>";
+      elem1.innerHTML= "<div class='marco chiste'>" + data + "</div>";
       elemTitulo.innerHTML="CHISTE MALO";
   })
 }
 
 function acercade(){ 
   const elem1 = document.getElementById("elemento1") 
-  elem1.innerHTML = "<div class='cuadro'><h3>Demo conexión datos AVEVA INSIGHT</h3><p>Realizada por OscarHR con Google Apps Script.</p><p>04/01/2025</p></div> <br><br>"
+  elem1.innerHTML = "<div class='marco'><h3>Demo conexión datos AVEVA INSIGHT</h3><p>Realizada por OscarHR con Google Apps Script.</p><p>04/01/2025</p></div> <br><br>"
   elem1.innerHTML += "<div> Ancho: "+ window.innerWidth +"</div>"
   elem1.innerHTML += "<div> Alto: "+ window.innerHeight; +"</div>"
   elem1.innerHTML += "<div> Resolucion: "+ window.devicePixelRatio  +"</div>"

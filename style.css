@@ -136,6 +136,18 @@ body label {
   margin-bottom: 5px;
 }
 
+.marco {
+  background-color: white; 
+  opacity: 90%;
+  border: 0.5vw solid var(--color-acento);
+  border-radius: 3vw;
+  padding: 4vw;
+  margin-bottom: 1vw;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
 .logform select, .logform input {   
   width: 100%;
   padding: 10px;
