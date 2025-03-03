@@ -1,7 +1,7 @@
 
 const webUrl= "https://script.google.com/macros/s/AKfycbyS5L58pIm7EUGNtslScWblYXTPTDKi1eu7f7CukD4rXPZZ4jBhZaQCKGIPA2Y-95HX/exec"   
 const imgEsperaUrl="/demopp_2/SimboloEspera.gif"
-const urlChiste="https://script.google.com/macros/s/AKfycbxm_JkOHZ8cqKHfg-8nDn9HtRySl1QiHuBpRWqSxSrzDn4Ezzx8wNkTx2LfsLE7wRVS/exec"
+const urlChiste="https://script.google.com/macros/s/AKfycbxQDkGmok12X_rM1-jeVbZaDarME5cMXdTL9a6VoiSAzSgfCmSkQGpRCyisDSi_LMt9/exec"
 const temas=[ 
   [ "#f8f4ff", "pink", "#CC0000", "white"  ],  //  1ario, 2ario, acento, blanco
   [ "cyan", "cyan", "blue", "white"  ],
@@ -102,7 +102,11 @@ async function chiste(){
   elem1.classList.remove("oculto");
   elem1.innerHTML = "<div class='imagenEspera'><img  src='" + imgEsperaUrl + "'></div> <br><br>"
 
-  fetch(url) 
+  fetch(url, {
+    headers: {
+      'Content-Type': "text/plain;charset=utf-8"
+    }
+  })
     .then (response=>{ return response.text()})
     .then (data=>{
       elem1.innerHTML= "<div class='marco chiste'>" + data + "</div>";
