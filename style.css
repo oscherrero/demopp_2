@@ -8,7 +8,6 @@
   --color-secundario: pink;
   --color-acento: red;
   --color-blanco: white; 
-  --header-size: 16vw;
   font-family: "Roboto", "Arial";
   font-size: 4vw;
 }
@@ -25,7 +24,7 @@ header {
   height: 4rem;
   background-color: var(--color-acento);
   color: var(--color-blanco);
-  padding: calc(var(--header-size)*0.15);
+  padding: 0.6rem;
 
   display: flex;
   align-items: center;
@@ -46,7 +45,7 @@ header  img{
 header .titulo {
   color: var(--color-blanco);
   font-family: "Arial";
-  font-size: calc(var(--header-size)*0.5);
+  font-size: 2rem;
 
   display: flex;
   justify-content: center;
@@ -108,7 +107,7 @@ main {
   flex: 1;
 
   background-color: var(--color-secundario);
-  padding: calc(var(--header-size)*0.25)    ;
+  padding: 1rem    ;
 }
 
 body button,
@@ -174,14 +173,14 @@ footer {
   bottom: 0;
   width: 100%;
 
-  height: calc(var(--header-size)*0.5 );
+  height: 2rem;
   background-color: var(--color-acento);
   color: white;
   }
 
 footer p {
   margin-left:5%;
-  font-size: calc(var(--header-size)*0.2);
+  font-size: 1rem;
 }
 
 .oculto {
@@ -196,7 +195,6 @@ footer p {
     /* desktop */
     @media  (min-width: 900px) {
       :root { 
-        --header-size: 12vh;
         font-size: 3vh;
       }
     }
@@ -204,7 +202,6 @@ footer p {
     /* movil landscape */
     @media (max-width: 900px) and (orientation: landscape)  {
       :root { 
-        --header-size: 16vh;
         font-size: 4vh;
       }
     }
