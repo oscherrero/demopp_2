@@ -196,7 +196,7 @@ footer p {
     /* desktop */
     @media  (min-width: 900px) {
       :root { 
-        --header-size: 10vh;
+        --header-size: 12vh;
         font-size: 3vh;
       }
     }
