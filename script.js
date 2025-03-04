@@ -64,7 +64,7 @@ async function cargarHTML() {
 
   if (resp.html == "NoAuth") {
       document.getElementById("elemento1").innerHTML = "<div style='color:red; text-align:center;'><br> INDICA UNA GRANJA Y CLAVE VALIDOS </div>"
-      document.getElementById("tituloGranja").innerHTML = "GRANJA";
+      document.getElementById("tituloGranja").innerHTML = "PREMIER PIGS";
     } else {
       document.getElementById("elemento1").innerHTML =resp.html
       document.getElementById("tituloGranja").innerHTML =  granjaInput.toUpperCase() 
@@ -77,7 +77,7 @@ async function cargarHTML() {
   } catch (error) {
     document.getElementById("elemento1").innerHTML = "<div style='color:red; text-align:center;'><br> FALLO EN LA CONSULTA DE DATOS </div>"
     document.getElementById("elemento1").innerHTML = error
-    document.getElementById("tituloGranja").innerHTML = "GRANJA";
+    document.getElementById("tituloGranja").innerHTML = "PREMIER PIGS";
 
   }  
 }
