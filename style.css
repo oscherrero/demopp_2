@@ -71,7 +71,7 @@ header .menu-burger span {
 }
 
 header nav {
-
+z-index:1;
   height: 100vh;
   padding: 5vh 5vw;
   position: fixed;
