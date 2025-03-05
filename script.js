@@ -57,10 +57,7 @@ async function cargarHTML() {
     })
 
   var resp = await response.json()
- // localStorage.setItem("options",resp.optionsHtml)
   cargarListaGranjas(resp.optionsHtml)
- // document.getElementById("granja").value = codInput
- // document.getElementById("cod").value =  codInput
 
   if (resp.html == "NoAuth" ) {
       document.getElementById("elemento1").innerHTML = "<div style='color:red; text-align:center;'><br> INDICA UNA GRANJA Y CLAVE VALIDOS </div>"
@@ -75,10 +72,10 @@ async function cargarHTML() {
     } else {     
       document.getElementById("elemento1").innerHTML = resp.html
       document.getElementById("tituloGranja").innerHTML =  granjaInput.toUpperCase() 
+      document.getElementById("logForm").classList.add("oculto");
+    
       var valor = JSON.stringify({ granja: granjaInput, cod: codInput })
       localStorage.setItem('granja', valor);
-      document.getElementById("logForm").classList.add("oculto");
-
       localStorage.setItem("options",resp.optionsHtml)
     }
   } catch (error) {
