@@ -65,10 +65,9 @@ async function cargarHTML() {
       document.getElementById("cod").value =""
       document.getElementById("logForm").classList.remove("oculto");
     } else   if ( resp.html == "") {
-      document.getElementById("elemento1").innerHTML = "<div style=' text-align:center;'><br> INDICA UNA GRANJA <br></div>"
       document.getElementById("tituloGranja").innerHTML = "PREMIER PIGS";
       document.getElementById("cod").value =""
-      document.getElementById("logForm").classList.remove("oculto");
+      verLogForm()
     } else {     
       document.getElementById("elemento1").innerHTML = resp.html
       document.getElementById("tituloGranja").innerHTML =  granjaInput.toUpperCase() 
