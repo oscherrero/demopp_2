@@ -65,9 +65,12 @@ async function cargarHTML() {
   if (resp.html == "NoAuth") {
       document.getElementById("elemento1").innerHTML = "<div style='color:red; text-align:center;'><br> INDICA UNA GRANJA Y CLAVE VALIDOS </div>"
       document.getElementById("tituloGranja").innerHTML = "PREMIER PIGS";
+     document.getElementById("cod").value =""
+      verLogForm()
     } else if (resp.html == "") {
       document.getElementById("elemento1").innerHTML = "<div style='color:blue; text-align:center;'><br> INDICA UNA GRANJA. </div>"
       document.getElementById("tituloGranja").innerHTML = "PREMIER PIGS";
+      verLogForm()
     } else {
       document.getElementById("elemento1").innerHTML =resp.html
       document.getElementById("tituloGranja").innerHTML =  granjaInput.toUpperCase() 
