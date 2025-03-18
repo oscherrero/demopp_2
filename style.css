@@ -169,16 +169,7 @@ body label {
   cursor: pointer;
 }
 
-.miBoton {
-  width: 100%;
-  padding: 15px;
-  background-color: var(--color-acento);
-  color: var(--color-blanco);
 
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-}
 .imagenEspera{
   position:absolute;
   bottom:0;
