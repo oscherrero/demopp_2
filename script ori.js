@@ -1,6 +1,6 @@
 
-const webUrl= "https://script.google.com/macros/s/AKfycbwFh4fhZPolS9zN0uGwCouteG9PcSjLkJqRdyABj3XZ-6A5b5LEic9QIb_BebPoUBXnPA/exec"   
-const imgEsperaUrl="/demoweb/SimboloEspera.gif"
+const webUrl= "https://script.google.com/macros/s/AKfycbyS5L58pIm7EUGNtslScWblYXTPTDKi1eu7f7CukD4rXPZZ4jBhZaQCKGIPA2Y-95HX/exec"   
+const imgEsperaUrl="/demopp_2/SimboloEspera.gif"
 const urlChiste="https://script.google.com/macros/s/AKfycbxtGofgvSOkwx7T7pwzHrzXA59swnf8DAY_2xNrySYdDFaHTds_8jOVtX1HS1tiEcoM/exec"
 const temas=[ 
   [ "#f8f4ff", "pink", "#CC0000", "white"  ],  //  1ario, 2ario, acento, blanco
@@ -9,7 +9,15 @@ const temas=[
 ]
 
 window.onload=init()
-
+    
+function cargarListaGranjas(options){
+  document.getElementById("granja").innerHTML = options
+  var stGranjaCod = localStorage.getItem("granja") != null ? localStorage.getItem("granja") : '{"granja":"","cod":""}';
+  var granjaCod = JSON.parse(stGranjaCod)
+  document.getElementById("granja").value = granjaCod.granja
+  document.getElementById("cod").value = granjaCod.cod
+}
+   
 function init() {
   var options =localStorage.getItem("options")
   
@@ -18,18 +26,10 @@ function init() {
   var tema=localStorage.getItem("tema")!=null?parseInt(localStorage.getItem("tema"))-1:10;
   localStorage.setItem("tema",tema)
   cambiarTema()
-  cargarHTML('bloque' )
-     
+  cargarHTML()
+
 }
 
-function cargarListaGranjas(options){
-  document.getElementById("site").innerHTML = options
-  var stGranjaCod = localStorage.getItem("site") != null ? localStorage.getItem("site") : '{"site":"","cod":""}';
-  var granjaCod = JSON.parse(stGranjaCod)
-  document.getElementById("site").value = granjaCod.site
-  document.getElementById("cod").value = granjaCod.cod
-}
-   
 function recargarWeb (){  location.href = location.href + "?" + new Date().getTime();}
 
 function info() {
@@ -38,8 +38,8 @@ function info() {
   document.getElementById("nota").textContent = " width: " + anchoPantalla + ", res: " + resPantalla;
 }
 
-async function cargarHTML(file) {
-   
+async function cargarHTML() {
+
   document.getElementById("elemento1").classList.remove("oculto");
   document.getElementById("logForm").classList.add("oculto");
   document.getElementById("elemento1").innerHTML = "<div class='imagenEspera'><img  src='" + imgEsperaUrl + "'></div> <br><br>"
@@ -47,10 +47,10 @@ async function cargarHTML(file) {
   try {
     
     const formData= new FormData(document.getElementById("logForm"))
-    const granjaInput= document.getElementById("site").value
+    const granjaInput= document.getElementById("granja").value
     const codInput= document.getElementById("cod").value
 
-    var url = webUrl + "?file="+file;
+   url = webUrl + "?file=bloque";
     const response = await fetch(url, {
         method: 'POST',
         body: formData,
@@ -61,34 +61,34 @@ async function cargarHTML(file) {
 
   if (resp.html == "NoAuth" ) {
       document.getElementById("elemento1").innerHTML = "<div style='color:red; text-align:center;'><br> INDICA UNA GRANJA Y CLAVE VALIDOS <br></div>"
-      document.getElementById("tituloSite").innerHTML = "DEMO API INSIGHT";
+      document.getElementById("tituloGranja").innerHTML = "PREMIER PIGS";
       document.getElementById("cod").value =""
       document.getElementById("logForm").classList.remove("oculto");
     } else   if ( resp.html == "") {
-      document.getElementById("tituloSite").innerHTML = "DEMO API INSIGHT";
+      document.getElementById("tituloGranja").innerHTML = "PREMIER PIGS";
       document.getElementById("cod").value =""
       verLogForm()
     } else {     
       document.getElementById("elemento1").innerHTML = resp.html
-      document.getElementById("tituloSite").innerHTML =  granjaInput.toUpperCase() 
+      document.getElementById("tituloGranja").innerHTML =  granjaInput.toUpperCase() 
       document.getElementById("logForm").classList.add("oculto");
     
-      var valor = JSON.stringify({ site: granjaInput, cod: codInput })
-      localStorage.setItem('site', valor);
+      var valor = JSON.stringify({ granja: granjaInput, cod: codInput })
+      localStorage.setItem('granja', valor);
       localStorage.setItem("options",resp.optionsHtml)
     }
   } catch (error) {
     document.getElementById("elemento1").innerHTML = "<div style='color:red; text-align:center;'><br> FALLO EN LA CONSULTA DE DATOS </div>"
     document.getElementById("elemento1").innerHTML = error
-    document.getElementById("tituloSite").innerHTML = "DEMO API INSIGHT";
+    document.getElementById("tituloGranja").innerHTML = "PREMIER PIGS";
 
   }  
 }
 
 function recuperarListaGranjas(){
-  var stGranjaCod = localStorage.getItem("site") != null ? localStorage.getItem("site") : '{"site":"","cod":""}';
+  var stGranjaCod = localStorage.getItem("granja") != null ? localStorage.getItem("granja") : '{"granja":"","cod":""}';
   var granjaCod = JSON.parse(stGranjaCod)
-  document.getElementById("site").value = granjaCod.site
+  document.getElementById("granja").value = granjaCod.granja
   document.getElementById("cod").value = granjaCod.cod
 }
 
@@ -98,10 +98,8 @@ function verLogForm(){
 }
 
 async function chiste(){ 
-
-  document.getElementById("logForm").classList.add("oculto");
   const elem1 = document.getElementById("elemento1") 
-  const elemTitulo=document.getElementById("tituloSite")
+  const elemTitulo=document.getElementById("tituloGranja")
 
   elem1.classList.remove("oculto");
   elem1.innerHTML = "<div class='imagenEspera'><img  src='" + imgEsperaUrl + "'></div> <br><br>"
@@ -135,9 +133,6 @@ function cambiarTema() {
 
 const menuButton = document.querySelector('.menu-burger');
 const menu = document.querySelector('nav');
-
-function closeMenu(){ document.querySelector('nav').classList.remove('active')     }
-
 menuButton.addEventListener('click', () => {
   menu.classList.toggle('active');
 });
@@ -147,11 +142,6 @@ document.addEventListener('click', (event) => {
     menu.classList.remove('active');
   };
 });
+function closeMenu(){ document.querySelector('nav').classList.remove('active')     }
 
-document.getElementById('verDatos').addEventListener('click', function() {
-  cargarHTML('bloque');
-});
 
-document.getElementById('verGraf').addEventListener('click', function() {
-  cargarHTML('bloqueChart');
-});
