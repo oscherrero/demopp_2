@@ -53,7 +53,7 @@ header .titulo {
   flex: 1;
   margin: 0 1rem;
   overflow: hidden;
-  max-width: calc(100% - 8rem);
+  max-width: 70%;
 }
 
 header .menu-burger {
