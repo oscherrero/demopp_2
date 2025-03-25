@@ -45,15 +45,15 @@ header  img{
 header .titulo {
   color: var(--color-blanco);
   font-family: "Arial";
-  font-size: clamp(1rem,2rem,2rem);
+  font-size: clamp(1rem, 2rem, 2rem);
   white-space: nowrap;
   display: flex;
   justify-content: center;
   align-items: center;
   flex: 1;
-  margin: 0 1rem;
-  overflow: hidden;
-  max-width: 60%;
+ // margin: 0 1rem;
+ // overflow: hidden;
+ // max-width: 60%;
 }
 
 header .menu-burger {
