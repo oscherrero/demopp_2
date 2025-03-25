@@ -52,6 +52,9 @@ header .titulo {
   align-items: center;
   flex: 1;
   margin: 0 1rem;
+    overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 8rem);
 }
 
 header .menu-burger {
